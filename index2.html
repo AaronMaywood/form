@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<input type="text" id="text1" placeholder="名前">
+	<br>
+	<input type="radio" id="radio1" name="group1" value="rock" checked>グー
+	<input type="radio" id="radio2" name="group1" value="paper">パー
+	<input type="radio" id="radio3" name="group1" value="scissors">チョキ
+	<br>
+	<select id="select1">
+		<option value="apple">りんご</option>
+		<option value="pear">なし</option>
+		<option value="peach">もも</option>
+	</select>
+	<br>
+	<button type="button" id="button1">送信</button>
+	<button type="button" id="button2">サンプル設定</button>
+    <script>
+		const button1 = document.querySelector('#button1');
+		button1.addEventListener('click', () => {
+			const text1 = document.querySelector('#text1');
+			const radio1 = document.querySelector('#radio1');
+			const radio2 = document.querySelector('#radio2');
+			const radio3 = document.querySelector('#radio3');
+			const select1 = document.querySelector('#select1');
+
+			// テキスト入力欄の出力
+			console.log(text1.value);
+
+			// ラジオボタン入力欄の出力
+			if(radio1.checked){
+				console.log(radio1.value);
+			}else if(radio2.checked){
+				console.log(radio2.value);
+			}else{
+				console.log(radio3.value);
+			}
+			// セレクトメニュー入力欄の出力
+			console.log(select1.value);
+		});
+		const button2 = document.querySelector('#button2');
+		button2.addEventListener('click', () => {
+			const text1 = document.querySelector('#text1');
+			const radio2 = document.querySelector('#radio2');
+			const select1 = document.querySelector('#select1');
+
+			// テキスト入力欄に値を設定
+			text1.value = '山田太郎';
+			// ラジオボタン入力欄に値を設定
+			radio2.checked = true;		// パー
+			// セレクトメニュー入力欄に値を設定
+			select1.value = 'peach';	// もも
+		});
+    </script>
+</body>
+</html>

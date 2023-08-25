@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<input type="text" id="text1" placeholder="名前">
+	<button type="button" id="button1">送信</button>
+    <script>
+		const button1 = document.querySelector('#button1');
+		button1.addEventListener('click', () => {
+			const text1 = document.querySelector('#text1');
+			// テキスト入力欄の出力
+			alert(`こんにちは${text1.value}`さん`);
+		});
+    </script>
+</body>
+</html>
